@@ -1,13 +1,19 @@
-export default function Button({ lang }) {
+
+
+
+export default function Button({ lang, handle, act }) {
+
+
+
 
 
     return (
         <>
-
-            <button className="">
+            <button onClick={handle} className={lang.id === act ? "active" : ""}>
                 {lang.title}
             </button>
 
         </>
     )
 }
+
