@@ -1,25 +1,27 @@
+import Button from "./Button"
 
+export default function Main({ languages }) {
 
-export default function Main(language) {
+    console.log(<Button />);
 
 
     return (
         <>
             <main>
+                <div className="container">
 
-                <ul className="navbar">
-                    {language.map(item => {
-                        return (
-                            <li key={item.id}>
-                                <button>
+                    <ul className="navbar">
+                        {languages.map(language => {
+                            return (
+                                <li key={language.id}>
+                                    <Button lang={language} />
+                                </li>
+                            )
+                        })}
 
-                                </button>
-                            </li>
-                        )
-                    })
-                    }
+                    </ul>
 
-                </ul>
+                </div>
 
             </main>
         </>
